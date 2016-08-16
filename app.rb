@@ -7,5 +7,5 @@ end
 
 post '/roman_numerals' do
     roman_numerals = RomanNumerals.new
-    "#{params[:number]} is in roman numerals " << roman_numerals.convert(params[:number].to_i)
+    roman_numerals.convert(params[:number])
 end
