@@ -1,11 +1,11 @@
 require 'sinatra'
 require_relative 'roman_numerals.rb'
 
-get '/roman_numerals' do
+get '/' do
     erb :roman_numerals
 end
 
-post '/roman_numerals' do
+post '/' do
     roman_numerals = RomanNumerals.new
     roman_numerals.convert(params[:number])
 end
